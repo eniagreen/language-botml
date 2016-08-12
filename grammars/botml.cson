@@ -1,0 +1,98 @@
+'scopeName': 'source.botml'
+'name': 'BotML'
+'fileTypes': ['bot']
+'patterns': [
+  # Specification
+  {
+    'match': '!\\s*BOTML\\s*(\\d)?$'
+    'name': 'markup.heading.specification.block'
+  }
+  # Comments
+  {
+    'begin': '^\\s*#'
+    'end': '$'
+    'name': 'comment.block'
+  }
+  # Variables
+  {
+    'match': '\\$\\w*'
+    'name': 'variable.interpolation'
+  }
+  {
+    'begin': '[#\\*\\$]\\{'
+    'end': '\\}'
+    'name': 'variable.interpolation'
+  }
+  {
+    'match': '\\$\\w+'
+    'name': 'variable.interpolation'
+  }
+  # Placeholders
+  {
+    'match': '\\*'
+    'name': 'variable.interpolation'
+  }
+  # Workflows
+  {
+    'begin': '^\\s*~'
+    'end': '$'
+    'name': 'entity.name.tag'
+  }
+  # References
+  {
+    'begin': '\\['
+    'end': '\\]'
+    'name': 'string.quoted.single'
+  }
+  # Conditional branching
+  {
+    'match': '^(if\\s+|else(?:[^\\w]))'
+    'captures':
+      '1':
+        'name': 'markup.bold'
+  }
+  # Lists
+  {
+    'begin': '^\\s*='
+    'end': '$'
+    'name': 'markup.bold'
+  }
+  {
+    'match': '^(-)\\s+'
+    'captures':
+      '1':
+        'name': 'markup.bold'
+  }
+  # Services
+  {
+    'match': '^\\s*(@)\\s*(\\w+)\\s+([^\\s]+)\\s*$'
+    'captures':
+      '1':
+        'name': 'markup.bold'
+      '2':
+        'name': 'markup.bold'
+      '3':
+        'name': 'meta.definition.variable'
+  }
+  {
+    'match': '^\\s*(@)\\s*(?:(\\w+)\\(\\$\\\)\\s*$)?'
+    'captures':
+      '1':
+        'name': 'markup.bold'
+      '2':
+        'name': 'markup.bold'
+  }
+  # Dialogues
+  {
+    'match': '^\\s*([<>])\\s*'
+    'captures':
+      '1':
+        'name': 'entity.name.function'
+  }
+  # Regular expressions
+  {
+    'begin': '/'
+    'end': '/'
+    'name': 'entity.name.function'
+  }
+]
