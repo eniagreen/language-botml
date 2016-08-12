@@ -1,12 +1,11 @@
 {
   "name": "language-botml",
-  "version": "0.0.1",
+  "version": "0.0.0",
   "description": "Syntax highlighting for BotML",
   "author": "Arnaud Leymet <arnaud@codename.co>",
-  "license": "UNLICENSED",
-  "private": true,
+  "repository": "https://github.com/botml/language-botml.git",
+  "license": "MIT",
   "engines": {
-    "atom": "*",
-    "node": "*"
+    "atom": "*"
   }
 }
