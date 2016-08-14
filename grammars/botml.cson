@@ -75,7 +75,7 @@
         'name': 'meta.definition.variable'
   }
   {
-    'match': '^\\s*(@)\\s*(?:(\\w+)\\(\\$\\\)\\s*$)?'
+    'match': '^\\s*(@)\\s*(?:(\\w+)\\(\\$\\\)\\s*(\\.[\\w\\.\\[\\]\\d]*)?$)?'
     'captures':
       '1':
         'name': 'markup.bold'
