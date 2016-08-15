@@ -5,6 +5,7 @@
   "author": "Arnaud Leymet <arnaud@codename.co>",
   "repository": "https://github.com/botml/language-botml.git",
   "license": "MIT",
+  "homepage": "https://github.com/botml/botml-js",
   "engines": {
     "atom": "*"
   }
