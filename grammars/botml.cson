@@ -89,6 +89,13 @@
       '1':
         'name': 'entity.name.function'
   }
+  # Prompts
+  {
+    'match': '^\\s*(\\?)\\s*'
+    'captures':
+      '1':
+        'name': 'entity.name.function'
+  }
   # Regular expressions
   {
     'begin': '/'
